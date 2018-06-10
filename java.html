@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>哈哈哈哈哈哈哈哈哈哈哈哈</h1>
+	</body>
+	<script type="text/javascript">
+		
+		JavaBean说白了就是一个规范吧，
+		不需要特别的包或者库，服务器已经内置支持了它，
+		只要满足了那个规范，那么就可以使用。
+		它的优点在于方便了在JSP从表单抽取数据。
+
+		首先说下这个规范，规范针对一个类，这个类只要是public的，
+		而且成员是封装的，有一个无参构造方法，有getter和setter，
+		那么这个类就是一个JavaBean。很简单。
+		
+		
+		
+		
+		
+		
+		
+		Servlet(Server Applet)，全称Java Servlet，未有中文译文。
+		是用Java编写的服务器端程序。
+		其主要功能在于交互式地浏览和修改数据，生成动态Web内容。
+		狭义的Servlet是指Java语言实现的一个接口，
+		广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，
+		人们将Servlet理解为后者。
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		JDK是 Java 语言的软件开发工具包，
+		主要用于移动设备、嵌入式设备上的java应用程序。
+		JDK是整个java开发的核心，
+		它包含了JAVA的运行环境(JVM+Java系统类库)和JAVA工具。
+		JDK是Java Development Kit 的缩写，
+		中文称为Java开发工具包，有SUN公司提供。
+		它为Java程序开发提供了编译和运行环境，
+		所有Java程序的编写都依赖于它。
+		使用JDK可以将Java程序编译成字节码文件，即。class文件。
+		（若要想在你的计算机上运行你的Java程序，必须下载安装JDK）
+		
+		
+		
+		
+		
+		
+		
+		
+		JSP全名为Java Server Pages，
+		中文名叫java服务器页面，其根本是一个简化的Servlet设计，
+		它是由Sun Microsystems公司倡导、
+		许多公司参与一起建立的一种动态网页技术标准。
+		Eclipse 是一个开放源代码的、基于Java的可扩展开发平台。
+		就其本身而言，它只是一个框架和一组服务，
+		用于通过插件组件构建开发环境。
+		幸运的是，Eclipse 附带了一个标准的插件集，
+		包括Java开发工具（Java Development Kit，JDK）。
+		eclipse是开发java的一款专业ide，
+		myeclipse本身是eclipse的插件(用于开发javaee的平台)，
+		后来myeclipse干脆把eclipse集成进去了，
+		所以现在你下载一个myeclipse就可以了，
+		eclipse也可以，如果需要在eclipse上面开发javaee应用程序，
+		你需要装一个插件就可以了，
+		
+		
+		
+		
+		我现在就是使用eclipse，需要什么样的功能，就自己添加，
+		在eclipse官方网站上除了提供eclipse下载外，
+		还有很多的plugin提供，实际上，
+		我更推荐我的朋友使用eclipse来自己打造自己需要的功能模块。
+		Eclipse分个版本，一个版本是支持J2EE开发的，
+		另一个版本不支持J2EE开始，需要安装MyEclipse插件。
+		还有一种开发工具MyEclipse,支持J2EE开发，
+		并且也包含Eclipse的功能
+
+
+
+
+
+
+
+
+		Eclipse是一个很好用的IDE，就开发J2EE项目而言，
+		有Eclipse for J2EE和MyEclipse两个工具可以使用。
+		对于刚接触工具的人来说，会有些摸不着头脑。
+
+
+
+
+
+
+		先说一下建立在里面建立工程的步骤
+		点击File 然后new一个Dynamic web project，
+		这的条目就是表示新建了一个Web项目。其工程目录结构为：	
+		 我们所要关注的就是Java Resources和Webcontent这两个文件夹。
+		 前者存放的是项目的源代码，后者就是服务器里面的项目的目录。
+		 比如Tomcat的话，就是webapp这个目录下面的东西。
+		 最终部署的时候，主要移动的就是这个目录。
+		 在Webcontent里面，最初只有Meta-inf和Web-inf两个目录。
+		 后者里面有3类文件，第一个是一个很重要的配置文件web.xml，
+		 它指导服务器做很多事情；
+		 第二个是classes文件夹，里面是java源码编译后的.class文件，
+		 这个文件夹与Java resource文件夹一一对应，
+		 只是.java与.class的关系罢了；第三就是lib文件夹。
+		 而且放在web-inf里面的页面是不能被浏览器直接访问到的。
+		 除了web-inf以外，我们也会新建一些其他目录，
+		 比如view或者image、css等等。这就是工程目录的一个大致情况。
+		
+		
+		
+		
+		
+		
+		
+		
+		   当我们写完一个工程时，可以直接在IDE里面运行，
+		   这时候默认是部署到Eclipse的工作目录下面，而非Tomcat，
+		   如果要直接让Eclipse自动部署到服务器，
+		   那么就要改动一下Eclipse的设置。
+		点击Eclipse控制台的Servers页面，
+		选中服务器右击，点Open后，如下图所示：
+		 看到ServerLocation内容，
+		 原本是第一个选项，即Eclipse工作目录，我们选择第二个，
+		 改为服务器目录，然后修改下面的Server path即可。
+		 如果这个页面时如上图所示灰色无法修改，
+		 得先把服务器上的项目停掉，还是在下面的Servers页面，
+		 把服务器里面的项目删掉就OK了。
+		 
+ 
+ 
+ 
+ 
+ 
+ 
+	 JDBC，全称是Java DataBase Connectivity.
+	 在J2EE中负责与数据库进行连接，操作数据库。
+	 两种方法可以使用：传统的JDBC方法和JDBC连接池。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 		两种方法可以使用：传统的JDBC方法和JDBC连接池
+		 使用传统的有以下弊端，
+		 首先应用程序每一次的开启和关闭数据库连接都很费时费空间，
+		 开销很大，如果系统要应付很大的并发量，
+		 系统的性能会大打折扣。而连接池的观念是服务器事先维护一个池，
+		 里面存储着一定数目的连接对象，
+		 如果应用程序要用，那么从池那里直接拿到，
+		 用完再归还，池子有一个自我的管理过程。这样的话，
+		 应用程序每一次的访问数据库，
+		 不用再进行打开关闭的操作，性能会大大提高。
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		再一个，是有关JNDI(Java Naming and Directory Interface,
+			Java命名和目录接口)
+		是SUN公司提供的一种标准的Java命名系统接口.
+		这个是J2EE的一个规范之一，
+		它的作用大致就是，输入一个key，返回key所对应的对象，
+		类似hashmap吧。这个对象可以是任何的东西，
+		比如数据库的连接对象。我们可以为对象起好名字，
+		至于它的细节内容，我们在程序当中不用关心，
+		我们只要拿这个名字去编程就好了，
+		他的具体细节写在配置文件中（context.xml）。
+		这个会简化编程和维护。试想，每一次的数据库连接，
+		原先都要指定 url，password，user以及数据库的类型，
+		这些都会随时变更
+		，那么我们的程序也必须跟着变化，
+		如果我们吧这些细节都放入配置文件中，
+		那么编程时就不用考虑这些事了，很方便吧。这就是JNDI的作用。
+		数据对象的定义叫做数据源的配置，是很重要的一步。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+		 ​Servlet运行于支持Java的应用服务器中。
+		 从实现上讲，Servlet可以响应任何类型的请求，
+		 但绝大多数情况下Servlet只用来扩展基于HTTP协议的Web服务器。
+		最早支持Servlet标准的是JavaSoft的Java Web Server。
+		此后，一些其它的基于Java的Web服务器开始支持标准的Servlet。
+		是用java语言编写的小程序。
+		servlet可以被认为是服务器端的applet。
+		servlet被Web服务器加载和执行，
+		就如同applet被浏览器加载和执行一样。
+
+
+
+
+
+
+
+
+
+		applet - servlet 对应的。相对于applet而言。		
+		要写servlet，你先安装一个jdk1.3吧，再装一个服务器，如Tomcat，
+		比较好，简单实用写serlvet够了。		
+		如果你想写EJB等东西 ，可能要装一个weblogic了。
+		beans可以被其他的java程序调用完成特定功能或者信息存储。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+		 JSP 与 PHP、ASP、ASP.NET 
+		 等语言类似，运行在服务端的语言。
+		JSP（全称Java Server Pages）
+		是由 Sun Microsystems 
+		公司倡导和许多公司参与共同创建的一种使软件开发者可以响应客户端请求，
+		而动态生成 HTML、XML 或其他格式文档的Web网页的技术标准。
+		JSP 技术是以 Java 语言作为脚本语言的，
+		JSP 网页为整个服务器端的 Java 库单元提供了一个接口来服务于HTTP的应用程序。
+		JSP文件后缀名为 *.jsp 。
+		JSP开发的WEB应用可以跨平台使用，既可以运行在 Linux 上也能运行在 Windows 上。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 	JSP开发环境是您用来开发、测试和运行JSP程序的地方
+	 设置Web服务器：Tomcat
+	目前，市场上有很多支持JSP和Servlets开发的Web服务器。
+	他们中的一些可以免费下载和使用，Tomcat就是其中之一。
+	Apache Tomcat是一个开源软件，
+	可作为独立的服务器来运行JSP和Servlets，
+	也可以集成在 Apache Web Server中。以下是Tomcat的配置方法：
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 		什么是Servlet?
+		① Servlet就是JAVA 类
+		② Servlet是一个继承HttpServlet类的类
+		③　这个在服务器端运行，用以处理客户端的请求
+ 		0.serverlet 是server+applet的缩写。
+		1.也是一个类，继承自HttpServlet，没有main方法		
+		2.有init 和 destroy方法，只会运行一次，容器是tomcat。		
+		3.使用的时候必须在web.xml中映射
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+		 Serverlet的运行机制：
+		Servlet的主要功能在于交互式地浏览和修改数据，
+		生成动态Web内容。这个过程为：
+		1、客户端发送请求至服务器端；
+		2、服务器将请求信息发送至Servlet；
+		3、Servlet生成响应内容并将其传给Server。
+		响应内容动态生成，通常取决于客户端的请求；
+		4、服务器将响应返回给客户端 
+ 
+ 
+ 
+ 
+ 
+ 
+ 			Serverlet的生命周期：
+			1、Server创建一个Servlet的实例，也就是调用了init（）；
+			2、一个客户端的请求到达Server；3、Server将请求发送给Serverlet			；
+			4、Serverlet生成对请求的响应；
+			5、Server激活Servlet的service()方法，
+			传递请求和响应对象作为参数；
+			a、service()方法获得关于请求对象的信息，
+			处理请求，访问其他资源，获得需要的信息；
+			b、service()方法使用响应对象的方法，将响应传回Server
+			，最终到达客户端。service()方法可能激活其它方法以处理请求
+			，如doGet()或doPost()或程序员自己开发的新的方法；
+			c、对于更多的客户端请求，Server创建新的请求和响应对象
+			，仍然激活此Servlet的service()方法，
+			将这两个对象作为参数传递给它。如此重 复以上的循环，
+			但无需再次调用init()方法。一般Servlet只初始化一次   ,
+			当Server不再需要Servlet时(一般当Server关闭时)，
+			Server调用Servlet的Destroy()方法。
+ 
+ 
+			 HttpServlet容器响应Web客户请求流程如下：
+			1）Web客户向Servlet容器发出Http请求；
+			2）Servlet容器解析Web客户的Http请求；
+			3）Servlet容器创建一个HttpRequest对象，
+			在这个对象中封装Http请求信息；
+			4）Servlet容器创建一个HttpResponse对象；
+			5）Servlet容器调用HttpServlet的service方法，
+			把HttpRequest和HttpResponse对象作为service方法的参数
+			传给HttpServlet对象；
+			6）HttpServlet调用HttpRequest的有关方法，获取HTTP请求信息；
+			7）HttpServlet调用HttpResponse的有关方法，生成响应数据；
+			8）Servlet容器把HttpServlet的响应结果传给Web客户
+ 
+ 
+ 
+ 
+ 
+ 
+	</script>
+	<script type="text/javascript">
+
+	</script>
+	
+</html>
